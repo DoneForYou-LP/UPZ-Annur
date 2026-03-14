@@ -1,7 +1,11 @@
 body{
-font-family: Arial, sans-serif;
+font-family:'Source Sans 3', sans-serif;
 margin:0;
 background:#f5f5f5;
+}
+
+h1,h2,h3{
+font-family:'Montserrat', sans-serif;
 }
 
 header{
@@ -12,13 +16,17 @@ padding:50px 20px;
 }
 
 .logo{
-width:250px;
+width:230px;
 }
 
-#produk,
-#form,
-#kontak{
-scroll-margin-top:75px;
+html{
+scroll-behavior:smooth;
+}
+
+header h1{
+margin:0;
+font-size:36px;
+font-weight:700;
 }
 
 .menu{
@@ -26,15 +34,176 @@ position:sticky;
 top:0;
 background:#0a7d3b;
 display:flex;
+flex-wrap:wrap;
 justify-content:center;
 gap:12px;
-padding:12px 0;
+padding:12px 10px;
 z-index:1000;
 box-shadow:0 2px 8px rgba(0,0,0,0.2);
 }
 
 .menu-btn{
 background:white;
+color:#0a7d3b;
+padding:8px 16px;
+border-radius:8px;
+text-decoration:none;
+font-size:14px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.menu-btn:hover{
+background:#0a7d3b;
+color:white;
+border:1px solid white;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+padding:40px 0;
+scroll-margin-top:100px;
+text-align:center;
+}
+
+.programs{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.judul-program{
+text-align:center;
+margin-bottom:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+margin-bottom:20px;
+text-align:center;
+}
+
+.card h3{
+color:#0a7d3b;
+}
+
+.wa-btn{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+margin-top:15px;
+}
+
+.doa{
+font-style:italic;
+margin-top:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:10px;
+margin-top:10px;
+}
+
+.gallery img{
+width:100%;
+height:120px;
+object-fit:cover;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:2000;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+transition:opacity 0.3s ease;
+opacity:1;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:30px;
+color:white;
+font-size:30px;
+cursor:pointer;
+}
+
+.prev,.next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+font-size:40px;
+color:white;
+cursor:pointer;
+padding:10px;
+}
+
+.prev{left:20px;}
+.next{right:20px;}
+
+footer{
+background:#0a7d3b;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+}
+
+input, select, textarea{
+box-sizing:border-box;
+width:100%;
+padding:8px;
+margin:5px 0;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+background:#0a7d3b;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+margin-top:10px;
+}
+
+#form-response{
+margin-top:15px;
+color:green;
+text-align:center;
+  }background:white;
 color:#0a7d3b;
 padding:8px 16px;
 border-radius:8px;
